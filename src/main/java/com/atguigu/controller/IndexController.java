@@ -21,4 +21,9 @@ public class IndexController {
 		return "spu";
 	}
 	
+	@RequestMapping("/goto_sku.do")
+	public String goto_sku() {
+		return "sku";
+	}
+	
 }

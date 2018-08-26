@@ -7,11 +7,13 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.view.RedirectView;
 
 import com.atguigu.bean.T_MALL_PRODUCT;
+import com.atguigu.mapper.SpuMapper;
 import com.atguigu.service.SpuServiceInf;
 import com.atguigu.util.MyFileUpload;
 import com.sun.mail.auth.MD4;
@@ -46,6 +48,12 @@ public class SpuController {
 		modelAndView.addObject("1","1234");
 		
 		return  modelAndView;
+	}
+	
+	@RequestMapping("/get_spu_list")
+	@ResponseBody
+	public List<T_MALL_PRODUCT> get_spu_list(Integer pp_id,Integer flbh2) {
+		return spuServiceInf.get_spu_list(pp_id,flbh2);
 	}
 	
 }

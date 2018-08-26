@@ -11,6 +11,12 @@
 			(#{shp_id},#{image})
 		</foreach>
 	</insert>
+	
+	<select id="get_spu_list" resultType="com.atguigu.bean.T_MALL_PRODUCT">
+		select * from t_mall_product
+	    where pp_id = #{pp_id}
+		and flbh2 = #{flbh2}
+	</select>
 
 
 	<insert useGeneratedKeys="true" keyColumn="id" keyProperty="id"

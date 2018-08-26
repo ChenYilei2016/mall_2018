@@ -13,4 +13,6 @@ public interface SpuMapper {
 
 	void insert_images(Map<Object, Object> map);
 
+	List<T_MALL_PRODUCT> get_spu_list(@Param("pp_id")Integer pp_id,@Param("flbh2") Integer flbh2);
+
 }

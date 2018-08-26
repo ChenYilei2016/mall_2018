@@ -29,4 +29,10 @@ public class SpuServiceImp implements SpuServiceInf {
 		spuMapper.insert_images(map);
 	}
 
+	@Override
+	public List<T_MALL_PRODUCT> get_spu_list(Integer pp_id, Integer flbh2) {
+		// TODO Auto-generated method stub
+		return spuMapper.get_spu_list(pp_id,flbh2);
+	}
+
 }
