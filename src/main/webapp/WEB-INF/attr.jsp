@@ -10,7 +10,23 @@
 <base href="<%=basePath %>">
 <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<script type="text/javascript">
+
+<title>硅谷商城</title>
+</head>
+<body>
+	商品属性信息管理
+	<hr>
+	一级：<select id="attr_class_1_select" onchange="get_attr_class_2(this.value);"><option>请选择</option></select>
+	二级：<select  id="attr_class_2_select" onchange="get_attr_list(this.value)"><option>请选择</option></select>
+	<br>
+	查询<br>
+	<a href="javascript:goto_attr_add()">添加</a><br>
+	删除<br>
+	编辑<br>
+	<hr>
+	<div id="attrListInner"></div>
+	
+	<script type="text/javascript">
 	$(function (){
 		$.getJSON("js/json/class_1.js",function(data){
 			$(data).each(function(i,json){
@@ -41,19 +57,5 @@
 		
 	}
 </script>
-<title>硅谷商城</title>
-</head>
-<body>
-	商品属性信息管理
-	<hr>
-	一级：<select id="attr_class_1_select" onchange="get_attr_class_2(this.value);"><option>请选择</option></select>
-	二级：<select  id="attr_class_2_select" onchange="get_attr_list(this.value)"><option>请选择</option></select>
-	<br>
-	查询<br>
-	<a href="javascript:goto_attr_add()">添加</a><br>
-	删除<br>
-	编辑<br>
-	<hr>
-	<div id="attrListInner"></div>
 </body>
 </html>

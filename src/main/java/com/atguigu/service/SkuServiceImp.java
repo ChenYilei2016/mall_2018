@@ -23,7 +23,7 @@ public class SkuServiceImp implements SkuServiceInf {
 		// 保存sku表，返回sku主键
 		sku.setShp_id(spu.getId());
 		skuMapper.insert_sku(sku);
-
+		
 		// 根据sku主键批量保存属性关联表
 		Map<Object, Object> map = new HashMap<Object, Object>();
 		map.put("shp_id", spu.getId());

@@ -3,6 +3,10 @@ package com.atguigu.bean;
 import java.util.List;
 
 public class OBJECT_T_MALL_ATTR extends T_MALL_ATTR {
+	
+	/**
+	 * 带有 原本的属性内容
+	 */
 
 	private List<T_MALL_VALUE> list_value;
 
